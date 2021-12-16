@@ -42,6 +42,11 @@ individual source file.
 Ohcount includes a Ruby binding which allows you to directly access its
 language detection features from a Ruby application.
 
+Language Support
+-------------------
+
+See: [src/languages.h](https://github.com/blackducksoftware/ohcount/blob/master/src/languages.h)
+
 System Requirements
 -------------------
 
@@ -50,19 +55,27 @@ Other unix-like environments should also work, but your mileage may vary.
 
 Ohcount does not support Windows.
 
-Source Code
------------
-
-Ohcount source code is available as a Git repository:
-
-  git clone git://github.com/blackducksoftware/ohcount.git
-
 Building Ohcount
 ----------------
 
-> Last updated: 2020-02-12
+```
+$ git clone git://github.com/blackducksoftware/ohcount.git
+$ cd ohcount
+```
 
-Ohcount targets `Ruby 2.*`. The ruby dev headers provided by Ubuntu/Fedora
+#### Dockerfile
+
+One may use the bundled Dockerfile to build ohcount for Ubuntu:
+
+```
+$ docker build -t ohcount:ubuntu .
+```
+
+#### Manual build
+
+> Last updated: 2021-12-09
+
+Ohcount needs `Ruby 2.*` to run tests. The ruby dev headers provided by Ubuntu/Fedora
 package managers were found to be missing a `config.h` header file. If the
 default ruby and ruby-dev packages do not work, install ruby using
 brew/rbenv/asdf/rvm, which work reliably with ohcount.
@@ -71,48 +84,38 @@ You will need ragel 7.0 or higher, bash, gperf, libpcre3-dev, libmagic-dev,
 gcc(version 7.3 or greater) and swig (>=3.0.0).
 For older gcc versions one could try [this fix](https://github.com/blackducksoftware/ohcount/pull/70/commits/c7511b9810a8660a8268a958fee0e365fb9af18f).
 
-```
-$ git clone git://github.com/blackducksoftware/ohcount.git
-$ cd ohcount
-```
-
-For the ruby bindings, there is a dependency for the 'test-unit' gem:
-```
-$ gem install test-unit
-```
-
-#### Ubuntu/Debian
+##### Ubuntu/Debian
 
 ```
 $ sudo apt-get install libpcre3 libpcre3-dev libmagic-dev gperf gcc ragel swig
 $ ./build
 ```
 
-### Fedora
+##### Fedora
 
 ```
 $ sudo dnf install gcc file-devel gperf ragel swig pcre-devel
 $ ./build
 ```
 
-#### OSx
+##### OSx
 
 ```
 $ brew install libmagic pcre ragel swig
 $ ./build
 ```
 
-#### Other Unix systems
+##### Other Unix systems
 
 * If build fails with a missing `ohcount.so` error and any `ruby/x86.../` folder has the file, copy it to `ruby/` folder.
 
 Using Ohcount
 -------------
 
-Once you've built ohcount, the executable program will be at bin/ohcount. The most basic use is to count lines of code in a directory tree. run:
+Once you've built ohcount, the executable program will be at bin/ohcount. The most basic use is to count lines of code in a directory tree:
 
 ```
-$ bin/ohcount
+$ bin/ohcount path/to/directory
 ```
 
 Ohcount support several options. Run `ohcount --help` for more information.
@@ -134,3 +137,17 @@ $ python python/setup.py install
 ```
 
 The python wrapper is currently unsupported.
+
+
+Contributing
+-------------
+
+* Observe any existing PR contribution and emulate the pattern. For e.g. see [this](https://github.com/blackducksoftware/ohcount/pull/76/files).
+* While writing the **test/expected_dir** files, disable any whitespace/tab replacing options from your editor.
+* Ohcount output has tabs in it, so the **test/expected_dir** also needs to contain tab characters.
+* Sample format of **test/expected_dir** is as follows. There is a tab character after dart, code & comment:
+```
+dart	code	void main() {
+dart	comment	  // Line comment
+```
+* Run tests with `./build tests`.

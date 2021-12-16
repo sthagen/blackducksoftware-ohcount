@@ -1,4 +1,3 @@
-
 void test_dart_comments() {
   test_parser_verify_parse(
     test_parser_sourcefile("dart", " //comment"),

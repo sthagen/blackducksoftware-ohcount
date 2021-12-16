@@ -157,6 +157,7 @@ void test_parser_verify_entity(SourceFile *sf, const char *entity,
 #include "parsers/test_smalltalk.h"
 #include "parsers/test_sql.h"
 #include "parsers/test_stratego.h"
+#include "parsers/test_swift.h"
 #include "parsers/test_tcl.h"
 #include "parsers/test_tex.h"
 #include "parsers/test_unrealscript.h"
@@ -346,6 +347,7 @@ void all_parser_tests() {
   all_smalltalk_tests();
   all_sql_tests();
   all_stratego_tests();
+  all_swift_tests();
   all_tcl_tests();
   all_tex_tests();
   all_unrealscript_tests();

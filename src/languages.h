@@ -110,6 +110,7 @@
 #define LANG_STRATEGO "stratego"
 #define LANG_STRUCTURED_BASIC "structured_basic"
 #define LANG_SQL "sql"
+#define LANG_SWIFT "swift"
 #define LANG_TCL "tcl"
 #define LANG_TEX "tex"
 #define LANG_TEX_DTX "tex_dtx"

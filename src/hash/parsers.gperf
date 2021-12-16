@@ -93,6 +93,7 @@
 #include "../parsers/stratego.h"
 #include "../parsers/structured_basic.h"
 #include "../parsers/sql.h"
+#include "../parsers/swift.h"
 #include "../parsers/tcl.h"
 #include "../parsers/tex.h"
 #include "../parsers/tex_dtx.h"
@@ -213,6 +214,7 @@ smalltalk, parse_smalltalk
 stratego, parse_stratego
 structured_basic, parse_structured_basic
 sql, parse_sql
+swift, parse_swift
 tcl, parse_tcl
 tex, parse_tex
 tex_dtx, parse_tex_dtx

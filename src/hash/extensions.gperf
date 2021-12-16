@@ -211,6 +211,7 @@ svg, BINARY
 svgz, BINARY
 svn, BINARY
 swf, BINARY
+swift, LANG_SWIFT
 t, LANG_PERL
 tac, LANG_PYTHON
 tap, LANG_PYTHON

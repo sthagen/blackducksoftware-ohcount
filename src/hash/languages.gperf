@@ -109,6 +109,7 @@ smalltalk, LANG_SMALLTALK, "Smalltalk", 0
 stratego, LANG_STRATEGO, "Stratego", 0
 structured_basic, LANG_STRUCTURED_BASIC, "Structured Basic", 0
 sql, LANG_SQL, "SQL", 0
+swift, LANG_SWIFT, "Swift", 0
 tcl, LANG_TCL, "TCL", 0
 tex, LANG_TEX, "TeX/LaTeX", 1
 unrealscript, LANG_UNREALSCRIPT, "UnrealScript", 0
