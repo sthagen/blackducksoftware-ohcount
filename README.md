@@ -45,7 +45,7 @@ language detection features from a Ruby application.
 Language Support
 -------------------
 
-See: [src/languages.h](https://github.com/blackducksoftware/ohcount/blob/master/src/languages.h)
+See: [src/languages.h](https://github.com/blackducksoftware/ohcount/blob/main/src/languages.h)
 
 System Requirements
 -------------------
