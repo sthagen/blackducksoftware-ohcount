@@ -92,6 +92,7 @@
 #define LANG_PHP "php"
 #define LANG_PIKE "pike"
 #define LANG_POSTSCRIPT "postscript"
+#define LANG_POWERSHELL "powershell"
 #define LANG_PROLOG "prolog"
 #define LANG_PUPPET "puppet"
 #define LANG_PYTHON "python"

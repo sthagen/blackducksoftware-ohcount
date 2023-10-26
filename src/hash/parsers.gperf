@@ -78,6 +78,7 @@
 #include "../parsers/phphtml.h"
 #include "../parsers/pike.h"
 #include "../parsers/postscript.h"
+#include "../parsers/powershell.h"
 #include "../parsers/prolog.h"
 #include "../parsers/puppet.h"
 #include "../parsers/python.h"
@@ -198,6 +199,7 @@ perl, parse_perl
 php, parse_phtml
 pike, parse_pike
 postscript, parse_postscript
+powershell, parse_powershell
 prolog, parse_prolog
 puppet, parse_puppet
 python, parse_python

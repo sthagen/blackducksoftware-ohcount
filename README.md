@@ -146,11 +146,16 @@ Contributing
 -------------
 
 * Observe any existing PR contribution and emulate the pattern. For e.g. see [this](https://github.com/blackducksoftware/ohcount/pull/76/files).
+* Run `./build` to compile the ragel files.
 * While writing the **test/expected_dir** files, disable any whitespace/tab replacing options from your editor.
 * Ohcount output has tabs in it, so the **test/expected_dir** also needs to contain tab characters.
-* Sample format of **test/expected_dir** is as follows. There is a tab character after dart, code & comment:
+* Sample format of **test/expected_dir** is as follows. There is a **Tab** character after dart, code & comment:
 ```
 dart	code	void main() {
 dart	comment	  // Line comment
 ```
-* Run tests with `./build tests`.
+* Some editors convert **Tab** to Space. The following steps help ensure that the proper character is added.
+** Open the file in Vim editor.
+** Run `:set list`. This makes all hidden characters like **Tab** visible.
+** Type *dart*, press `ctrl+v` followed by `tab`.
+** Run the tests to confirm these changes: `./build tests`.
